@@ -1,0 +1,163 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:poll >--------------------------
+[INFO] Building poll 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.4.2:run (default-cli) > test-compile @ poll >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ poll ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ poll ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ poll ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory E:\Shivani Projects\poll\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ poll ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Shivani Projects\poll\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.4.2:run (default-cli) < test-compile @ poll <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.2:run (default-cli) @ poll ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.2)
+
+2021-04-27 02:26:30.228  INFO 11416 --- [  restartedMain] com.example.poll.PollApplication         : Starting PollApplication using Java 1.8.0_251 on DESKTOP-KC3TEJU with PID 11416 (E:\Shivani Projects\poll\target\classes started by Shivani in E:\Shivani Projects\poll)
+2021-04-27 02:26:30.231  INFO 11416 --- [  restartedMain] com.example.poll.PollApplication         : No active profile set, falling back to default profiles: default
+2021-04-27 02:26:30.279  INFO 11416 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-27 02:26:30.279  INFO 11416 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-27 02:26:30.850  INFO 11416 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-27 02:26:30.917  INFO 11416 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2021-04-27 02:26:31.661  INFO 11416 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-27 02:26:31.687  INFO 11416 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-27 02:26:31.688  INFO 11416 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-27 02:26:31.894  INFO 11416 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-27 02:26:31.895  INFO 11416 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1615 ms
+2021-04-27 02:26:31.976  INFO 11416 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-27 02:26:32.079  INFO 11416 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-27 02:26:32.084  INFO 11416 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-27 02:26:32.215  INFO 11416 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-27 02:26:32.252  INFO 11416 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-04-27 02:26:32.353  INFO 11416 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-27 02:26:32.443  INFO 11416 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists comment CASCADE 
+Hibernate: drop table if exists option CASCADE 
+Hibernate: drop table if exists poll CASCADE 
+Hibernate: drop table if exists user CASCADE 
+Hibernate: drop table if exists vote CASCADE 
+Hibernate: drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: create table comment (comment_id bigint generated by default as identity, comment varchar(255), commented_by varchar(255), ques_id bigint, primary key (comment_id))
+Hibernate: create table option (option_id bigint generated by default as identity, option varchar(255), ques_id bigint, primary key (option_id))
+Hibernate: create table poll (ques_id bigint generated by default as identity, created_by varchar(255), created_date varchar(255), question varchar(255), tag varchar(255), username varchar(255), primary key (ques_id))
+Hibernate: create table user (id bigint not null, email varchar(255), image_src varchar(255), name varchar(255), password varchar(255), primary key (id))
+Hibernate: create table vote (vote_id bigint generated by default as identity, voted_by varchar(255), voted_date varchar(255), option_id bigint, primary key (vote_id))
+Hibernate: alter table comment add constraint FK976hetafggaicv5nkd1yn95ee foreign key (ques_id) references poll
+Hibernate: alter table option add constraint FKa4l6ha3my0hnb0v1ywyh5a4lf foreign key (ques_id) references poll
+Hibernate: alter table vote add constraint FK5umi51fdy2rrua64mrmew0usu foreign key (option_id) references option
+2021-04-27 02:26:33.130  INFO 11416 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-27 02:26:33.137  INFO 11416 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-27 02:26:33.151  INFO 11416 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-27 02:26:33.723  WARN 11416 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-27 02:26:33.787  INFO 11416 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-27 02:26:33.989  INFO 11416 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-27 02:26:33.997  INFO 11416 --- [  restartedMain] com.example.poll.PollApplication         : Started PollApplication in 4.102 seconds (JVM running for 4.568)
+2021-04-27 02:27:45.783  INFO 11416 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-27 02:27:45.784  INFO 11416 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-27 02:27:45.785  INFO 11416 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select user0_.id as id1_3_, user0_.email as email2_3_, user0_.image_src as image_sr3_3_, user0_.name as name4_3_, user0_.password as password5_3_ from user user0_
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into user (email, image_src, name, password, id) values (?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_3_, user0_.email as email2_3_, user0_.image_src as image_sr3_3_, user0_.name as name4_3_, user0_.password as password5_3_ from user user0_
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.commented_by=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select user0_.id as id1_3_, user0_.email as email2_3_, user0_.image_src as image_sr3_3_, user0_.name as name4_3_, user0_.password as password5_3_ from user user0_
+Hibernate: update user set email=?, image_src=?, name=?, password=? where id=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: insert into poll (ques_id, created_by, created_date, question, tag, username) values (null, ?, ?, ?, ?, ?)
+Hibernate: insert into option (option_id, option, ques_id) values (null, ?, ?)
+Hibernate: insert into option (option_id, option, ques_id) values (null, ?, ?)
+Hibernate: update option set option=?, ques_id=? where option_id=?
+Hibernate: update option set option=?, ques_id=? where option_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.commented_by=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_0_, poll0_.created_by as created_2_2_0_, poll0_.created_date as created_3_2_0_, poll0_.question as question4_2_0_, poll0_.tag as tag5_2_0_, poll0_.username as username6_2_0_, options1_.ques_id as ques_id3_1_1_, options1_.option_id as option_i1_1_1_, options1_.option_id as option_i1_1_2_, options1_.option as option2_1_2_, options1_.ques_id as ques_id3_1_2_, votes2_.option_id as option_i4_4_3_, votes2_.vote_id as vote_id1_4_3_, votes2_.vote_id as vote_id1_4_4_, votes2_.option_id as option_i4_4_4_, votes2_.voted_by as voted_by2_4_4_, votes2_.voted_date as voted_da3_4_4_ from poll poll0_ left outer join option options1_ on poll0_.ques_id=options1_.ques_id left outer join vote votes2_ on options1_.option_id=votes2_.option_id where poll0_.ques_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_0_, poll0_.created_by as created_2_2_0_, poll0_.created_date as created_3_2_0_, poll0_.question as question4_2_0_, poll0_.tag as tag5_2_0_, poll0_.username as username6_2_0_, options1_.ques_id as ques_id3_1_1_, options1_.option_id as option_i1_1_1_, options1_.option_id as option_i1_1_2_, options1_.option as option2_1_2_, options1_.ques_id as ques_id3_1_2_, votes2_.option_id as option_i4_4_3_, votes2_.vote_id as vote_id1_4_3_, votes2_.vote_id as vote_id1_4_4_, votes2_.option_id as option_i4_4_4_, votes2_.voted_by as voted_by2_4_4_, votes2_.voted_date as voted_da3_4_4_ from poll poll0_ left outer join option options1_ on poll0_.ques_id=options1_.ques_id left outer join vote votes2_ on options1_.option_id=votes2_.option_id where poll0_.ques_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.ques_id=?
+Hibernate: insert into comment (comment_id, comment, commented_by, ques_id) values (null, ?, ?, ?)
+Hibernate: select poll0_.ques_id as ques_id1_2_0_, poll0_.created_by as created_2_2_0_, poll0_.created_date as created_3_2_0_, poll0_.question as question4_2_0_, poll0_.tag as tag5_2_0_, poll0_.username as username6_2_0_, options1_.ques_id as ques_id3_1_1_, options1_.option_id as option_i1_1_1_, options1_.option_id as option_i1_1_2_, options1_.option as option2_1_2_, options1_.ques_id as ques_id3_1_2_, votes2_.option_id as option_i4_4_3_, votes2_.vote_id as vote_id1_4_3_, votes2_.vote_id as vote_id1_4_4_, votes2_.option_id as option_i4_4_4_, votes2_.voted_by as voted_by2_4_4_, votes2_.voted_date as voted_da3_4_4_ from poll poll0_ left outer join option options1_ on poll0_.ques_id=options1_.ques_id left outer join vote votes2_ on options1_.option_id=votes2_.option_id where poll0_.ques_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.ques_id=?
+com.example.poll.entity.Comment@5232e23e
+Hibernate: select user0_.id as id1_3_, user0_.email as email2_3_, user0_.image_src as image_sr3_3_, user0_.name as name4_3_, user0_.password as password5_3_ from user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.commented_by=?
+Hibernate: select poll0_.ques_id as ques_id1_2_0_, poll0_.created_by as created_2_2_0_, poll0_.created_date as created_3_2_0_, poll0_.question as question4_2_0_, poll0_.tag as tag5_2_0_, poll0_.username as username6_2_0_, options1_.ques_id as ques_id3_1_1_, options1_.option_id as option_i1_1_1_, options1_.option_id as option_i1_1_2_, options1_.option as option2_1_2_, options1_.ques_id as ques_id3_1_2_, votes2_.option_id as option_i4_4_3_, votes2_.vote_id as vote_id1_4_3_, votes2_.vote_id as vote_id1_4_4_, votes2_.option_id as option_i4_4_4_, votes2_.voted_by as voted_by2_4_4_, votes2_.voted_date as voted_da3_4_4_ from poll poll0_ left outer join option options1_ on poll0_.ques_id=options1_.ques_id left outer join vote votes2_ on options1_.option_id=votes2_.option_id where poll0_.ques_id=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select user0_.id as id1_3_, user0_.email as email2_3_, user0_.image_src as image_sr3_3_, user0_.name as name4_3_, user0_.password as password5_3_ from user user0_
+Hibernate: select poll0_.ques_id as ques_id1_2_, poll0_.created_by as created_2_2_, poll0_.created_date as created_3_2_, poll0_.question as question4_2_, poll0_.tag as tag5_2_, poll0_.username as username6_2_ from poll poll0_ where poll0_.created_by=?
+Hibernate: select options0_.ques_id as ques_id3_1_0_, options0_.option_id as option_i1_1_0_, options0_.option_id as option_i1_1_1_, options0_.option as option2_1_1_, options0_.ques_id as ques_id3_1_1_ from option options0_ where options0_.ques_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select votes0_.option_id as option_i4_4_0_, votes0_.vote_id as vote_id1_4_0_, votes0_.vote_id as vote_id1_4_1_, votes0_.option_id as option_i4_4_1_, votes0_.voted_by as voted_by2_4_1_, votes0_.voted_date as voted_da3_4_1_ from vote votes0_ where votes0_.option_id=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+Hibernate: select comment0_.comment_id as comment_1_0_, comment0_.comment as comment2_0_, comment0_.commented_by as commente3_0_, comment0_.ques_id as ques_id4_0_ from comment comment0_ where comment0_.commented_by=?
+Hibernate: select comments0_.ques_id as ques_id4_0_0_, comments0_.comment_id as comment_1_0_0_, comments0_.comment_id as comment_1_0_1_, comments0_.comment as comment2_0_1_, comments0_.commented_by as commente3_0_1_, comments0_.ques_id as ques_id4_0_1_ from comment comments0_ where comments0_.ques_id=?
+Hibernate: select poll0_.ques_id as ques_id1_2_0_, poll0_.created_by as created_2_2_0_, poll0_.created_date as created_3_2_0_, poll0_.question as question4_2_0_, poll0_.tag as tag5_2_0_, poll0_.username as username6_2_0_, options1_.ques_id as ques_id3_1_1_, options1_.option_id as option_i1_1_1_, options1_.option_id as option_i1_1_2_, options1_.option as option2_1_2_, options1_.ques_id as ques_id3_1_2_, votes2_.option_id as option_i4_4_3_, votes2_.vote_id as vote_id1_4_3_, votes2_.vote_id as vote_id1_4_4_, votes2_.option_id as option_i4_4_4_, votes2_.voted_by as voted_by2_4_4_, votes2_.voted_date as voted_da3_4_4_ from poll poll0_ left outer join option options1_ on poll0_.ques_id=options1_.ques_id left outer join vote votes2_ on options1_.option_id=votes2_.option_id where poll0_.ques_id=?
+Hibernate: select user0_.id as id1_3_0_, user0_.email as email2_3_0_, user0_.image_src as image_sr3_3_0_, user0_.name as name4_3_0_, user0_.password as password5_3_0_ from user user0_ where user0_.id=?
+Hibernate: select vote0_.vote_id as vote_id1_4_, vote0_.option_id as option_i4_4_, vote0_.voted_by as voted_by2_4_, vote0_.voted_date as voted_da3_4_ from vote vote0_ where vote0_.voted_by=?
+^C
